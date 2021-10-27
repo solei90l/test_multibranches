@@ -1,5 +1,6 @@
 pipeline {
     agent any 
+<<<<<<< HEAD
     
     tools {
        gradle 'Gradle-6.2'
@@ -18,6 +19,22 @@ pipeline {
                 echo 'executing gradle'
                 sh './gradlew -v'
                
+=======
+    stages {
+        stage('build') {
+            steps {
+                echo 'Building the app' 
+            }
+        }
+      stage('test') {
+            steps {
+                echo 'Testing the app' 
+            }
+        }
+      stage('deploy') {
+            steps {
+                echo 'Deploying the app' 
+>>>>>>> origin/features
             }
         }
     }
